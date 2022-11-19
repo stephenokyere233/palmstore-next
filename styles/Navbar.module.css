@@ -1,0 +1,17 @@
+.header {
+  /* border: 2px solid red; */
+  height: 6em;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 6em;
+  background: #ebf5f0;
+  z-index: 1;
+}
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: blueviolet;
+}
