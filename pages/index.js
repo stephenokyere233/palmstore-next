@@ -11,18 +11,14 @@ import Featured from "../components/Featured";
 import Newsletter from "../components/Newsletter";
 import FooterBanner from "../components/FooterBanner";
 
-const Home = ({ products, heroProducts, featureProducts,footerBanner }) => {
-  // console.log(featureProducts);
+const Home = ({ products, heroProducts, featureProducts, footerBanner }) => {
   return (
     <div>
       <Navbar />
-      <Hero
-        heroSection={heroProducts.length && heroProducts[0]}
-        // src={heroProducts[0].image}
-      />
+      <Hero heroSection={heroProducts.length && heroProducts[0]} />
       <ProductsCon productSection={products.length && products} />
       <Featured featured={featureProducts} />
-      <FooterBanner footerProducts={footerBanner.length && footerBanner[0]}/>
+      <FooterBanner footerProducts={footerBanner.length && footerBanner[0]} />
       <Newsletter />
       <Footer />
     </div>
@@ -31,16 +27,15 @@ const Home = ({ products, heroProducts, featureProducts,footerBanner }) => {
 export const getServerSideProps = async () => {
   const query = '*[_type=="product"]';
   const products = await client.fetch(query);
-
   const heroQuery = '*[_type=="hero"]';
   const heroProducts = await client.fetch(heroQuery);
   const featureQuery = '*[_type=="features"]';
   const featureProducts = await client.fetch(featureQuery);
-    const footerQuery = '*[_type=="footer"]';
-    const footerBanner = await client.fetch(footerQuery);
+  const footerQuery = '*[_type=="footer"]';
+  const footerBanner = await client.fetch(footerQuery);
 
   return {
-    props: { products, heroProducts, featureProducts,footerBanner },
+    props: { products, heroProducts, featureProducts, footerBanner },
   };
 };
 
