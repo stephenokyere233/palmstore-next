@@ -3,7 +3,6 @@ import styles from "../styles/Product.module.css";
 import Product from "./Product";
 
 const ProductsCon = ({ productSection }) => {
-  console.log(productSection);
   return (
     <div className={styles.wrapper}>
       <h1>CHECK OUT OUR BESTSELLERS</h1>

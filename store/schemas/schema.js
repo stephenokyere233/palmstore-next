@@ -4,8 +4,9 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import product from "./product";
 import hero from "./hero";
 import features from "./features";
+import footer from "./footer";
 
 export default createSchema({
   name: "default",
-  types: schemaTypes.concat([product,hero,features]),
+  types: schemaTypes.concat([product,hero,features,footer]),
 });

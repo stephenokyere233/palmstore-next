@@ -1,6 +1,7 @@
 .container {
-  border: 2px solid red;
-  padding-inline: 6em;
+  /* border: 2px solid red; */
+  padding: 4em 6em;
+  margin-bottom: 6em;
   background: rgb(65, 65, 65);
   color: white;
 }
@@ -21,8 +22,12 @@
 }
 .input {
   /* flex: 1; */
+  border: 2px solid #222;
+  border-radius: 10px;
   background: transparent;
+  font-size: 20px;
   text-indent: 10px;
+  color: white;
   width: 500px;
   /* margin-inline:10px ; */
 }
@@ -34,4 +39,6 @@
   border: none;
   background: blueviolet;
   color: white;
+  border-radius: 10px;
+
 }

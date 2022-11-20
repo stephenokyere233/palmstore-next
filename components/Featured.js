@@ -4,7 +4,6 @@ import styles from "../styles/Product.module.css";
 import Product from './Product';
 
 const Featured = ({featured}) => {
-  console.log(featured);
 
   return (
     <div className={styles.wrapper}>
