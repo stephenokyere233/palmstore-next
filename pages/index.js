@@ -22,8 +22,8 @@ const Home = ({ products, heroProducts, featureProducts,footerBanner }) => {
       />
       <ProductsCon productSection={products.length && products} />
       <Featured featured={featureProducts} />
-      <Newsletter />
       <FooterBanner footerProducts={footerBanner.length && footerBanner[0]}/>
+      <Newsletter />
       <Footer />
     </div>
   );

@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600;700&display=swap");
 html,
 body {
-  padding: 0;
-  margin: 0;
+
   font-family: "Poppins", sans-serif;
     background: #ebf5f0;
   -ms-overflow-style: none;
@@ -18,11 +17,20 @@ a {
 }
 
 * {
+    padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 
 
+@media screen and (max-width:768px){
+  *{
+  /* border: 2px solid red; */
+  }
+
+  
+}
 /* 
 @media (prefers-color-scheme: dark) {
   html {
