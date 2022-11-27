@@ -3,6 +3,7 @@
   height: 6em;
   position: sticky;
   top: 0;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;

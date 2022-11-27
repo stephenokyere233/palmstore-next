@@ -30,7 +30,7 @@ const Footer = () => {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Necessitatibus animi laboriosam quia rem itaque blanditiis assumenda
-            sunt, magnam asperiores dolore?
+            sunt, magnam asperiores
           </p>
         </div>
         <div className={footerStyles.importantLinks}>
