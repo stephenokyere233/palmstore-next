@@ -1,31 +1,23 @@
 .container {
-  /* border: 2px solid red; */
   padding: 6em 6em;
   margin-bottom: 6em;
-  /* background: rgb(65, 65, 65); */
   width: 100vw;
-  /* color: white; */
   background: white;
 }
 .container > h2,
 .container > p {
   text-align: center;
-  
 }
 .container > p {
   font-size: 20px;
   text-transform: capitalize;
-
 }
 .form {
   display: flex;
-  /* border: 2px solid blue; */
-  /* width: 600px; */
   gap: 20px;
   justify-content: center;
 }
 .input {
-  /* flex: 1; */
   border: 2px solid #222;
   border-radius: 10px;
   background: transparent;
@@ -33,7 +25,6 @@
   text-indent: 10px;
   color: white;
   width: 500px;
-  /* margin-inline:10px ; */
 }
 .btn {
   width: 200px;
@@ -44,29 +35,25 @@
   background: blueviolet;
   color: white;
   border-radius: 10px;
-
 }
-@media screen and (min-width:500px) and (max-width:600px) {
-  .container > h2{
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .container > h2 {
     font-size: 20px;
   }
-  .container>p,.input,.btn{
+  .container > p,
+  .input,
+  .btn {
     font-size: 16px;
-    /* border: 2px solid red; */
   }
-
-  
 }
-@media screen and (max-width:499px) {
-  .container > h2{
+@media screen and (max-width: 499px) {
+  .container > h2 {
     font-size: 18px;
-    /* border: 2px solid red; */
-    /* width: 300px; */
     margin: auto;
   }
-  .container>p,.input,.btn{
+  .container > p,
+  .input,
+  .btn {
     font-size: 14px;
   }
-
-  
 }

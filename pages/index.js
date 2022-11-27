@@ -3,7 +3,6 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
-import styles from "../styles/Home.module.css";
 import { client } from "../lib/client";
 import { urlFor } from "../lib/client";
 import ProductsCon from "../components/ProductsCon";

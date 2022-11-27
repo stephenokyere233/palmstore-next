@@ -1,5 +1,4 @@
 .header {
-  /* border: 2px solid red; */
   height: 6em;
   position: sticky;
   top: 0;
@@ -16,18 +15,8 @@
   font-weight: bold;
   color: blueviolet;
 }
-@media screen and (max-width:768px){
-  .header{
-  /* border: 2px solidpad red; */
-  padding-inline:1em ;
+@media screen and (max-width: 768px) {
+  .header {
+    padding-inline: 1em;
   }
-  
-  
-}
-@media screen and (min-width:1500px){
-  .container{
-  /* border: 2px solid red; */
-  }
-
-  
 }

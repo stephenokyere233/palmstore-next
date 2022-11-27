@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from "../styles/Product.module.css";
-// import wrapstyles from "../styles/ProductCon.module.css";
 import Product from './Product';
 
 const Featured = ({featured}) => {

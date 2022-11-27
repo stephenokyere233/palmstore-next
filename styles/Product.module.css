@@ -1,75 +1,71 @@
-.container{
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding-inline: 6em;
-    margin-bottom: 7em;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-inline: 6em;
+  margin-bottom: 7em;
 }
-.sub{
-    text-align: center;
-    font-size: 20px
+.sub {
+  text-align: center;
+  font-size: 20px;
 }
-.wrapper h1{
-    text-align: center;
-    text-transform: uppercase;
+.wrapper h1 {
+  text-align: center;
+  text-transform: uppercase;
 }
-.card{
-    border: 2px solid gainsboro;
-    width:275px ;
-    padding: 10px;
-    border-radius: 20px;
-    max-height: 330px;
-
+.card {
+  border: 2px solid gainsboro;
+  width: 275px;
+  padding: 10px;
+  border-radius: 20px;
+  max-height: 330px;
 }
-.card img{
+.card img {
+  width: 250px;
+  border: 2px solid gainsboro;
+  height: 200px;
+  object-fit: cover;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.desc {
+  margin-block: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.desc div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.arrow {
+  font-size: 1.5em;
+  border: 2px solid gainsboro;
+  padding: 5px;
+  color: blueviolet;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+@media screen and (max-width: 769px) {
+  .card {
     width: 250px;
-    border: 2px solid gainsboro;
-    height: 200px;
-    object-fit: cover;
-    background-size: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-
-}
-.desc{
-    margin-block: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.desc div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin:0;
-    padding: 0;
-}
-.arrow{
-    font-size:1.5em;
-    border: 2px solid gainsboro;
-    padding: 5px;
-    color: blueviolet;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.title{
-    font-size: 20px;
-    font-weight: bold;
-}
-@media screen and (max-width:769px){
-    .card{
-        width: 250px;
-    }
-    .card img{
-        width: 225px;
-    }
-    .container{
-        padding-inline:1em ;
-    }
-    
+  }
+  .card img {
+    width: 225px;
+  }
+  .container {
+    padding-inline: 1em;
+  }
 }
