@@ -4,7 +4,7 @@ import {
   FaLinkedin,
   FaFacebookSquare,
 } from "react-icons/fa";
-import footerStyles from '../styles/Footer.module.css'
+import footerStyles from "../styles/Footer.module.css";
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
           <div className={footerStyles.icons}>
             <FaInstagram />
             <FaTwitter />
-            <FaLinkedin/>
+            <FaLinkedin />
             <FaFacebookSquare />
           </div>
         </div>

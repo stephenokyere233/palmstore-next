@@ -2,13 +2,25 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   padding-inline: 6em;
   margin-bottom: 7em;
 }
 .sub {
-  text-align: center;
-  font-size: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+.wrapper{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  margin: auto;
+  width: 100vw;
+
+
 }
 .wrapper h1 {
   text-align: center;
