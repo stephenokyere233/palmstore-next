@@ -9,11 +9,44 @@ import ProductsCon from "../components/ProductsCon";
 import Featured from "../components/Featured";
 import Newsletter from "../components/Newsletter";
 import FooterBanner from "../components/FooterBanner";
+import { useEffect, useContext } from "react";
+import { AppContext } from "../context/context";
 
 const Home = ({ products, heroProducts, featureProducts, footerBanner }) => {
+  const {
+    itemQuantity,
+    setItemQuantity,
+    addedProducts,
+    setAddedProducts,
+    setTotalQuantity,
+    totalCost,
+    setTotalCost,
+  } = useContext(AppContext);
+
+  // useEffect(() => {
+  //   const cartItems = localStorage.getItem("cart-items");
+  //   console.log(cartItems)
+  //   if (!cartItems) return;
+  //   const cartArray = JSON.parse(cartItems);
+  //   setAddedProducts(cartArray);
+  //   console.log(cartArray);
+  //   console.log(cartArray.length);
+
+  //   setTotalQuantity(cartArray.length);
+
+  //   let sum = 0;
+  //   for (let index = 0; index < cartArray.length; index++) {
+  //     const element = cartArray[index].price * cartArray[index].itemQuantity;
+  //     sum += element;
+  //     console.log(sum);
+  //   }
+  //   setTotalCost(sum);
+
+  //   setItemQuantity(1);
+  // }, []);
+
   return (
     <div>
-      <Navbar />
       <Hero heroSection={heroProducts.length && heroProducts[0]} />
       <ProductsCon productSection={products.length && products} />
       <Featured featured={featureProducts} />

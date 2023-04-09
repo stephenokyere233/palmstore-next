@@ -11,8 +11,7 @@
     text-align: center;
     font-size: 20px;
 }
-.wrapper{
-    /* border: 2px solid red; */
+/* .wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +20,7 @@
   width: 100vw;
 
 
-}
+} */
 .wrapper h1 {
   text-align: center;
   text-transform: uppercase;

@@ -1,9 +1,9 @@
 .wrapper {
   /* border: 2px solid red; */
-  min-height: 100vh;
-  width: 100vw;
-  padding-inline: 6em;
-  padding-block: 20px;
+  /* min-height: 100vh; */
+  /* width: 100vw; */
+  /* padding-inline: 6em; */
+  /* padding-block: 20px; */
 }
 .header {
   display: flex;
@@ -17,6 +17,7 @@
 .reviews{
     margin-block: 10px;
     color: blueviolet;
+    display: flex;
 }
 .details{
     /* border: 2px solid red; */

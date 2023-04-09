@@ -5,8 +5,8 @@ import Product from './Product';
 const Featured = ({featured}) => {
 
   return (
-    <div className={styles.wrapper}>
-      <h1>Featured Products</h1>
+    <div className={`${styles.wrapper} mx-auto`}>
+      <h1 className="text-3xl font-medium">Featured Products</h1>
       <p className={styles.sub}>Limited In Stock Grab yours now!</p>
       <div className={styles.container}>
         {featured.map((product) => (

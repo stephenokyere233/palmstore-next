@@ -1,7 +1,8 @@
 {
   "root": true,
   "project": {
-    "name": "Sanity Project"
+    "name": "Palmstore",
+    "basePath": "/studio"
   },
   "api": {
     "projectId": "8owo799v",
@@ -15,9 +16,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
