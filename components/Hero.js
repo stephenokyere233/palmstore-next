@@ -10,36 +10,38 @@ const Hero = ({ heroSection }) => {
   const imageProps2 = useNextSanityImage(client, heroSection.image2);
 
   return (
-    <main className="relative flex min-h-[85vh] flex-col-reverse items-center justify-around lg:flex-row">
-      <div className={`${heroStyles.imageContainer} border `}>
+    <main className="relative flex min-h-[85vh] flex-col-reverse items-center justify-around xl:flex-row">
+      <div className={`relative flex w-full xl:max-w-[800px]`}>
+        <div>
+          <Image
+            alt={heroSection.product}
+            className="w-[300px] md:w-[500px] object-cover"
+            {...imageProps}
+            priority
+          />
+          <div className={heroStyles.desc}>
+            <h3>Y68 Smart Watch</h3>
+            <span>{heroSection.desc}</span>
+          </div>
+        </div>
         <Image
           alt={heroSection.product}
-          className={heroStyles.heroImage}
-          {...imageProps}
-          priority
-        />
-        <Image
-          alt={heroSection.product}
-          className={heroStyles.heroImageTwo}
+          className="absolute bottom-2 right-2 w-[200px] md:w-[300px] object-contain"
           {...imageProps2}
         />
         <div className={heroStyles.desc2}>
           <h3>Bass Booster X5000</h3>
           <span>Live the music</span>
         </div>
-        <div className={heroStyles.desc}>
-          <h3>{heroSection.product}</h3>
-          <span>{heroSection.desc}</span>
-        </div>
       </div>
       <section
-        className={`flex w-full flex-col items-center justify-center lg:max-w-[800px] `}
+        className={`flex w-full flex-col items-center justify-center xl:max-w-[800px]`}
       >
-        <h1 className="whitespace-nowrap text-[3em] font-bold uppercase text-[#152238] md:text-[6em]">
+        <h1 className="whitespace-nowrap text-[3em] font-bold uppercase text-[#152238] md:text-[5em] lg:text-[6em]">
           {heroSection.heading1} <br />{" "}
           <span className="w-full justify-end">& {heroSection.heading2}</span>
         </h1>
-        <h3 className="px-4 py-4 text-center text-lg font-light text-gray-600">
+        <h3 className="px-4 py-4 text-center md:text-2xl font-light text-gray-600">
           Enjoy 25% off all your Headphones & Watches
         </h3>
         <Link href={`/product/${heroSection.slug.current}`}>
