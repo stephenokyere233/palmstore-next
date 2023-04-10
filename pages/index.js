@@ -23,28 +23,6 @@ const Home = ({ products, heroProducts, featureProducts, footerBanner }) => {
     setTotalCost,
   } = useContext(AppContext);
 
-  // useEffect(() => {
-  //   const cartItems = localStorage.getItem("cart-items");
-  //   console.log(cartItems)
-  //   if (!cartItems) return;
-  //   const cartArray = JSON.parse(cartItems);
-  //   setAddedProducts(cartArray);
-  //   console.log(cartArray);
-  //   console.log(cartArray.length);
-
-  //   setTotalQuantity(cartArray.length);
-
-  //   let sum = 0;
-  //   for (let index = 0; index < cartArray.length; index++) {
-  //     const element = cartArray[index].price * cartArray[index].itemQuantity;
-  //     sum += element;
-  //     console.log(sum);
-  //   }
-  //   setTotalCost(sum);
-
-  //   setItemQuantity(1);
-  // }, []);
-
   return (
     <div>
       <Hero heroSection={heroProducts.length && heroProducts[0]} />
@@ -52,7 +30,6 @@ const Home = ({ products, heroProducts, featureProducts, footerBanner }) => {
       <Featured featured={featureProducts} />
       <FooterBanner footerProducts={footerBanner.length && footerBanner[0]} />
       <Newsletter />
-      <Footer />
     </div>
   );
 };

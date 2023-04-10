@@ -3,6 +3,7 @@ import { AppContext } from "../context/context";
 import Cart from "./Cart";
 import Navbar from "./Navbar";
 import { Toaster } from "react-hot-toast"
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   const { showCart, setShowCart,setTotalQuantity,setTotalCost,setAddedProducts,setItemQuantity } = useContext(AppContext);
@@ -36,6 +37,7 @@ const Layout = ({ children }) => {
         <Toaster/>
         <Navbar />
         <div onClick={()=>setShowCart(false)}>{children}</div>
+        <Footer/>
       </div>
       {showCart && <Cart />}
     </>

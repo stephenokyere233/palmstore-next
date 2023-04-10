@@ -65,7 +65,6 @@ const ProductDetails = ({ products, product, featureProducts }) => {
     setTotalCost,
     totalCost,
   } = useContext(AppContext);
-  console.log(product);
 
   const increment = () => {
     if (itemQuantity >= 0) {
@@ -203,7 +202,8 @@ const ProductDetails = ({ products, product, featureProducts }) => {
           </div>
         </header>
         <section className="mt-10">
-          <div>
+          <h2 className="mx-auto  text-center text-2xl mb-4 font-semibold uppercase">Products You may Like</h2>
+          <div className="grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 flex-wrap gap-10 mb-10">
             {products.map((product) => {
               const { name, price, slug, image } = product;
               return (

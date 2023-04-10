@@ -4,9 +4,11 @@ import Product from "./Product";
 
 const ProductsCon = ({ productSection }) => {
   return (
-    <div className={styles.wrapper}>
-      <h1>CHECK OUT OUR BESTSELLERS</h1>
-      <div className={styles.container}>
+    <div className="mx-auto max-w-[85rem]">
+      <h1 className="mb-4 text-center text-2xl font-semibold uppercase ">
+        CHECK OUT OUR BESTSELLERS
+      </h1>
+      <div className="mb-10 grid grid-cols-1 flex-wrap place-items-center gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {productSection.map((product) => (
           <Product
             key={product.name}

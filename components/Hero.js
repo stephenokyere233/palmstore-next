@@ -9,8 +9,8 @@ const Hero = ({ heroSection }) => {
   const imageProps2 = useNextSanityImage(client, heroSection.image2);
 
   return (
-    <main className={heroStyles.container}>
-      <div className={heroStyles.imageContainer}>
+    <main className="relative lg:flex-row flex min-h-[85vh] items-center justify-around flex-col-reverse">
+      <div className={`${heroStyles.imageContainer} border `}>
         <Image
           alt={heroSection.product}
           className={heroStyles.heroImage}
@@ -31,13 +31,20 @@ const Hero = ({ heroSection }) => {
           <span>{heroSection.desc}</span>
         </div>
       </div>
-      <section className={heroStyles.typo}>
-        <h1>
-          {heroSection.heading1} <br /> <span>& {heroSection.heading2}</span>
+      <section
+        className={`flex w-full lg:max-w-[800px] flex-col items-center justify-center `}
+      >
+        <h1 className="text-[#152238] whitespace-nowrap text-[3em] md:text-[6em] font-bold uppercase">
+          {heroSection.heading1} <br />{" "}
+          <span className="w-full justify-end">& {heroSection.heading2}</span>
         </h1>
-        <h3>Enjoy 25% off all your Headphones & Watches</h3>
+        <h3 className="py-4 text-lg font-light text-gray-600 text-center px-4">
+          Enjoy 25% off all your Headphones & Watches
+        </h3>
         <Link href={`/product/${heroSection.product}`}>
-          <button>Shop Now!</button>
+          <button className="rounded-10 cursor-pointer rounded-md border-none bg-purple-700 px-20 py-6 text-2xl lg:text-3xl font-semibold text-white">
+            Shop Now!
+          </button>
         </Link>
       </section>
     </main>

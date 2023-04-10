@@ -43,42 +43,80 @@ const Cart = () => {
 
   const CartItem = ({ product }) => {
     const [quantity, setQuantity] = useState(product.itemQuantity);
+    const [itemCost, setItemCost] = useState(product.price);
 
-    const onRemoveProduct=(productToRemove,productsArray)=>{
-      const filteredArray= productsArray.filter(product => product !== productToRemove);
-      console.log(filteredArray)
-      setAddedProducts(filteredArray)
-      localStorage.setItem("cart-items",JSON.stringify(filteredArray))
-      console.log("product removed")
-      setTotalQuantity(filteredArray.length)
+    const onRemoveProduct = (productToRemove, productsArray) => {
+      const filteredArray = productsArray.filter(
+        (product) => product !== productToRemove
+      );
+      console.log(filteredArray);
+      setAddedProducts(filteredArray);
+      localStorage.setItem("cart-items", JSON.stringify(filteredArray));
+      console.log("product removed");
+      setTotalQuantity(filteredArray.length);
 
-          let sum = 0;
+      let sum = 0;
 
-          for (let index = 0; index < filteredArray.length; index++) {
-            const element =
-              filteredArray[index].price * filteredArray[index].itemQuantity;
-            sum += element;
-            console.log(sum);
-          }
-          setTotalCost(sum);
+      for (let index = 0; index < filteredArray.length; index++) {
+        const element =
+          filteredArray[index].price * filteredArray[index].itemQuantity;
+        sum += element;
+        console.log(sum);
+      }
+      setTotalCost(sum);
+    };
 
+    function updateProductQuantity(
+      productToUpdate,
+      newQuantity,
+      productsArray
+    ) {
+      const index = addedProducts.findIndex(
+        (product) => product === productToUpdate
+      );
+      if (index >= 0 && product.itemQuantity >= 1) {
+        console.log(index);
+        console.log(addedProducts[index].itemQuantity);
+        addedProducts[index] = {
+          ...addedProducts[index],
+          itemQuantity: addedProducts[index].itemQuantity++,
+        };
+        console.log("newQu", newQuantity);
+        console.log(addedProducts[index]);
+      }
+      // const updatedProducts = productsArray.map((product) => {
+      //   if (product === productToUpdate) {
+
+      //     return { ...product, itemQuantity: Number(newQuantity) };
+      //   } else {
+      //     return product;
+      //   }
+      // });
+
+      // setAddedProducts(updatedProducts);
     }
 
-    const increment = () => {
-      if (product.itemQuantity >= 0) {
-        setQuantity((prev) => prev + 1);
-      }
-      return;
-    };
+    // const increment = () => {
+    //   // if (product.itemQuantity >= 1) {
+    //     setQuantity((prev) => prev + 1);
+    //     // setItemCost((prev) => prev * product.itemQuantity);
+    //     updateProductQuantity(product, quantity, addedProducts);
+    //     // console.log(product);
+    //     // console.log(itemCost);
+    //   // }
+    //   return;
+    // };
+    console.log(addedProducts);
     const decrement = () => {
       if (product.itemQuantity >= 2) {
         setQuantity((prev) => prev - 1);
+        //  setTotalCost((prev) => prev - product.price);
       }
       return;
     };
     const imageProps = useNextSanityImage(client, product.image[0]);
     return (
-      <div className="flex gap-2">
+      <div className="flex select-none gap-2">
         <Image
           className="h-[150px] w-[180px] rounded-lg bg-white object-contain"
           src={product.image[0]}
@@ -90,27 +128,37 @@ const Cart = () => {
             <h2>{product.name}</h2>
             <h2>${product.price}</h2>
           </span>
-          <div className="flex justify-between pb-3">
-            <div className="grid w-[150px] grid-cols-3 items-center gap-2 rounded-md border border-black text-xl">
+          <span className="flex text-xl font-medium justify-center text-center gap-2">
+            <p> Quantity:</p>
+            <p> {quantity} pcs</p>
+          </span>
+          <div className="flex justify-center pb-3">
+            {/* <div className="grid w-[150px] grid-cols-3 items-center gap-2 rounded-md border border-black text-xl">
               <span
                 onClick={decrement}
                 className={`flex cursor-pointer justify-center`}
               >
                 <AiOutlineMinus />
               </span>
-              <input
-                value={quantity}
-                onChange={(e) => setQuantity(e.target.value)}
-                className="flex w-[50px] justify-center text-center outline-none"
-              />
+        
               <span
-                onClick={increment}
+                onClick={() => {
+                  setQuantity((prev) => prev + 1);
+                  updateProductQuantity(product, quantity, addedProducts);
+                  console.log(product)
+                }}
                 className={`flex cursor-pointer justify-center`}
               >
                 <AiOutlinePlus />
               </span>
-            </div>
-            <AiOutlineDelete onClick={()=>onRemoveProduct(product,addedProducts)} size={28} color="red" />
+            </div> */}
+            <button
+              className="flex items-center gap-2 rounded-md bg-red-400 p-2 text-white"
+              onClick={() => onRemoveProduct(product, addedProducts)}
+            >
+              <p>Remove From Cart</p>
+              <AiOutlineDelete size={28} />
+            </button>
           </div>
         </div>
       </div>
@@ -132,13 +180,12 @@ const Cart = () => {
           <div className="relative flex h-full flex-col gap-4 pt-4  ">
             <div className="flex flex-1 flex-col gap-4 overflow-y-scroll">
               {addedProducts?.map((product) => {
-                console.log(product);
                 return <CartItem key={product.name} product={product} />;
               })}
             </div>
             <div className="my-6 flex w-full flex-col gap-2 px-4 ">
               <span className="flex justify-between text-xl font-semibold">
-                <h2>Total</h2>
+                <h2>Subtotal</h2>
                 <h2>${totalCost}</h2>
               </span>
               <button className="w-full rounded-md bg-purple-700 p-2 text-2xl text-white ">
@@ -155,6 +202,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-
-

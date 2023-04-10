@@ -1,21 +1,12 @@
-.container {
+/* .container {
   width: 100vw;
   min-height: 85vh;
   position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-.typo {
-  width: 100%;
-  align-self: flex-start;
-  padding-block: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-}
+} */
+
 .imageContainer {
   position: relative;
   left: 4em;
@@ -45,6 +36,16 @@
   height: 15em;
   bottom: 1.5em;
 }
+/* .typo {
+  width: 100%;
+  align-self: flex-start;
+  padding-block: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
 .typo > h1 {
   font-size: 6em;
   color: #152238;
@@ -61,15 +62,15 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-}
-.typo button {
+} */
+/* .typo button {
   background: blueviolet;
   border: none;
   padding: 10px 20px;
   border-radius: 10px;
   font-size: 20px;
   cursor: pointer;
-}
+} */
 .desc2 {
   display: none;
 }
