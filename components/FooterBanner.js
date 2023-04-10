@@ -2,6 +2,7 @@ import styles from "../styles/FooterBanner.module.css";
 import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import { client, urlFor } from "../lib/client";
+import Link from "next/link";
 
 const FooterBanner = ({ footerProducts }) => {
   const {
@@ -10,6 +11,7 @@ const FooterBanner = ({ footerProducts }) => {
     discount,
     product,
     image,
+    slug,
     heading1,
     heading2,
     saleTime,
@@ -35,7 +37,12 @@ const FooterBanner = ({ footerProducts }) => {
           <p className={styles.smallText}>{product}</p>
           <span className={styles.largeText}>{heading2}</span>
           <span className={styles.smallText}>{desc}</span>
+          {/* <Link href={`/product/${slug}`}> */}
+            <Link href={`/product/${slug.current}`}>
+
           <button>{buttonText}</button>
+            </Link>
+          {/* </Link> */}
         </section>
       </div>
     </div>

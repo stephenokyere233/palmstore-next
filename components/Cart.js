@@ -133,27 +133,8 @@ const Cart = () => {
             <p> {quantity} pcs</p>
           </span>
           <div className="flex justify-center pb-3">
-            {/* <div className="grid w-[150px] grid-cols-3 items-center gap-2 rounded-md border border-black text-xl">
-              <span
-                onClick={decrement}
-                className={`flex cursor-pointer justify-center`}
-              >
-                <AiOutlineMinus />
-              </span>
-        
-              <span
-                onClick={() => {
-                  setQuantity((prev) => prev + 1);
-                  updateProductQuantity(product, quantity, addedProducts);
-                  console.log(product)
-                }}
-                className={`flex cursor-pointer justify-center`}
-              >
-                <AiOutlinePlus />
-              </span>
-            </div> */}
             <button
-              className="flex items-center gap-2 rounded-md bg-red-400 p-2 text-white"
+              className="flex text-sm items-center gap-2 rounded-md bg-red-400 p-2 text-white"
               onClick={() => onRemoveProduct(product, addedProducts)}
             >
               <p>Remove From Cart</p>
